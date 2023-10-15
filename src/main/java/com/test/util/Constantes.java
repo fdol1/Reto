@@ -7,5 +7,13 @@ public class Constantes {
     public static final String OPCION_WEB_TABLES = "Web Tables";
     public static final String OPCION_DATA_PICKER = "Date Picker";
     public static final String OPCION_ALERT_FRAME_WINDOWS = "Alerts, Frame & Windows";
+    public static final String OPCION_ELIMINADO = "Eliminado";
+    public static final String OPCION_NO_ELIMINADO = "no eliminado";
+
+    public static final String LLAVE_EMAIL_ESCENARIO = "Email_escenario";
+    public static final String LLAVE_EMAIL_WEB = "Email_lista";
+    public static final String LLAVE_USUARIO_ELIMINADO = "usuario_eliminado";
+    public static final String LLAVE_USUARIO_NO_ELIMINADO = "usuario_no_eliminado";
+
 }
 

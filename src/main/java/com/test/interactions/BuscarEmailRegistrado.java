@@ -7,6 +7,8 @@ import net.serenitybdd.screenplay.targets.Target;
 
 import java.util.List;
 
+import static com.test.util.Constantes.LLAVE_EMAIL_WEB;
+
 public class BuscarEmailRegistrado implements Interaction {
 
     private Target lista;
@@ -26,7 +28,7 @@ public class BuscarEmailRegistrado implements Interaction {
         List<WebElementFacade> listObjeto = lista.resolveAllFor(actor);
         for (int i = 0; i < listObjeto.size(); i++) {
             if (listObjeto.get(i).getText().trim().equals(opcion)) {
-                actor.remember("Email lista", listObjeto.get(i).getText().trim());
+                actor.remember(LLAVE_EMAIL_WEB, listObjeto.get(i).getText().trim());
                 break;
             }
         }

@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import java.util.List;
 
 import static com.test.userinterface.UiElements.ICON_DELETE;
+import static com.test.util.Constantes.*;
 
 public class ElimiarRegistro implements Interaction {
 
@@ -32,11 +33,11 @@ public class ElimiarRegistro implements Interaction {
         for (int i = 0; i < listObjeto.size(); i++) {
             if (listObjeto.get(i).getText().trim().equals(opcion)) {
                 listDelet.get(i).click();
-                actor.remember("usuario eliminado", "Eliminado");
+                actor.remember(LLAVE_USUARIO_ELIMINADO, OPCION_ELIMINADO);
                 break;
             }
             else{
-                actor.remember("usuario eliminado", "No encontrado");
+                actor.remember(LLAVE_USUARIO_NO_ELIMINADO, OPCION_NO_ELIMINADO);
 
             }
         }

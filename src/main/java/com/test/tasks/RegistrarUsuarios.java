@@ -11,6 +11,7 @@ import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static com.test.userinterface.UiElements.*;
+import static com.test.util.Constantes.LLAVE_EMAIL_ESCENARIO;
 
 public class RegistrarUsuarios implements Task {
 
@@ -38,6 +39,6 @@ public class RegistrarUsuarios implements Task {
                 Click.on(BTN_GUARDAR_REGISTRO),
                 BuscarEmailRegistrado.enLaTabla(LIST_CORREOS_USUARIOS,registroUsuarioData.getEmail())
         );
-        actor.remember("Email escenario", registroUsuarioData.getEmail());
+        actor.remember(LLAVE_EMAIL_ESCENARIO, registroUsuarioData.getEmail());
     }
 }

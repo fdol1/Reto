@@ -5,6 +5,9 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 
+import static com.test.util.Constantes.LLAVE_FECHA;
+import static com.test.util.Constantes.LLAVE_FEHCA_Y_HORA;
+
 public class ConvertirFormatoDeFechas implements Interaction {
 
     private final FechaYHoraModel fechaYHoraModel;
@@ -135,7 +138,7 @@ public class ConvertirFormatoDeFechas implements Interaction {
                 fechaYHora+= "11"+ fechaYHoraModel.getHora().substring(2,5) + " PM";
                 break;
         }
-        actor.remember("fecha", fecha);
-        actor.remember("fechaYHora", fechaYHora);
+        actor.remember(LLAVE_FECHA, fecha);
+        actor.remember(LLAVE_FEHCA_Y_HORA, fechaYHora);
     }
 }

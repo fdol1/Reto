@@ -23,7 +23,7 @@ public class FalsaEspera implements Interaction {
 
         try {
             Thread.sleep(tiempo);
-            Logger.getAnonymousLogger().info("El tiempo de espera de : " + (tiempo/1000) + " segundos, ha terminado");
+      //      Logger.getAnonymousLogger().info("El tiempo de espera de : " + (tiempo/1000) + " segundos, ha terminado");
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

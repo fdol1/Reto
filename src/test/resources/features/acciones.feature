@@ -24,7 +24,7 @@ Característica: Realizar registro de uno o mas usuarios en Tools qa
     Entonces realiza busqueda en la tabla sin encontrar el registro
 
   @SeleccionarFechas
-  Esquema del escenario: : Seleccionar fechas
+  Esquema del escenario: Seleccionar fechas, Selecciona las fechas y luego las compara
     Dado que fer ingresa al modulo de fechas
     Cuando seleccionar las fechas del menu
       | mes   | anio   | dia   | hora   |
@@ -36,6 +36,27 @@ Característica: Realizar registro de uno o mas usuarios en Tools qa
 
 
   @ventanas
-  Escenario: Interaccion con ventanas en el portal tool qa
-    Dado que fer ingresa al modulo de Alerts, frame y windows
-    Cuando interactua con la seccion de navegador y ventanas
+  Esquema del escenario: Interaccion con Browser Windows, Se abren las diferentes ventas y obtenie info de ellas.
+    Dado que fer abre una nueva pestania emergente
+    Cuando selecciona la opcion del boton
+      | botonOpcion   |
+      | <botonOpcion> |
+    Entonces Verifica haber vuelto a la pestania principal
+    Ejemplos:
+      | botonOpcion        |
+      | New Tab            |
+      | New Window         |
+      | New Window Message |
+
+  @alertas
+  Esquema del escenario: : Interaccion con Alertas
+    Dado que fer ingresa al modulo de alertas
+    Cuando selecciona un tipo de alerta
+      | tipoAlerta   |
+      | <tipoAlerta> |
+    Ejemplos:
+      | tipoAlerta        |
+      | Click             |
+  #    | Click y espera    |
+  #    | Click y confirmar |
+  #    | Click y escribir  |

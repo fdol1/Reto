@@ -35,7 +35,7 @@ public class SeleccionarOpcion implements Interaction {
             case OPCION_NEW_WINDOW_MESSAGE:
                 actor.attemptsTo(Click.on(BTN_NEW_WINDOW_MESSAGE));
                 break;
-            case OPCION_CLICK:
+            case OPCION_CLICK: //prueba
                 actor.attemptsTo(Click.on(BTN_CLICK), InteraccionConAlertas.emergentes());
                 break;
             case OPCION_CLICK_ESPERA:

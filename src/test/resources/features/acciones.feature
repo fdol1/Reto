@@ -17,12 +17,14 @@ Característica: Realizar registro de uno o mas usuarios en Tools qa
       | nombre1 | nombre2  | email         | edad | salario | departamento |
       | luis    | fernando | l1_@gmail.com | 49   | 50000   | sistemas     |
 
+  @RutaCritica
   @EliminarUsuario
   Escenario: Realizar eliminacion de usuario
     Dado que fer ingresa al registro de usuario
     Cuando busca el usuario a eliminar por el correo: kierra@example.com
     Entonces realiza busqueda en la tabla sin encontrar el registro
 
+  @RutaCritica
   @SeleccionarFechas
   Esquema del escenario: Seleccionar fechas, Selecciona las fechas y luego las compara
     Dado que fer ingresa al modulo de fechas
@@ -35,6 +37,7 @@ Característica: Realizar registro de uno o mas usuarios en Tools qa
       | November | 2022 | 23  | 23:45 |
 
 
+  @RutaCritica
   @ventanas
   Esquema del escenario: Interaccion con Browser Windows, Se abren las diferentes ventas y obtenie info de ellas.
     Dado que fer abre una nueva pestania emergente
@@ -48,6 +51,7 @@ Característica: Realizar registro de uno o mas usuarios en Tools qa
       | New Window         |
       | New Window Message |
 
+  @RutaCritica
   @alertas
   Esquema del escenario: : Interaccion con Alertas
     Dado que fer ingresa al modulo de alertas
@@ -60,3 +64,15 @@ Característica: Realizar registro de uno o mas usuarios en Tools qa
   #    | Click y espera    |
   #    | Click y confirmar |
   #    | Click y escribir  |
+
+
+  @dialos
+  Escenario: : Interaccion con ModalDialos
+    Dado que fer ingresa al modulo modal dialos
+    Cuando cuando lee el texto dentro del los iframe
+
+  @iFrame
+  Escenario: : Interaccion con Iframes
+    Dado que fer ingresa al modulo iframes
+    Cuando cuando lee el texto dentro del iframe
+

@@ -3,10 +3,7 @@ package com.test.stepdefinitions;
 import com.test.interactions.SeleccionarOpcion;
 import com.test.model.FechaYHoraModel;
 import com.test.model.RegistroUsuarioModel;
-import com.test.questions.VerificarFechas;
-import com.test.questions.VerificarUsuarioEliminado;
-import com.test.questions.VerificarUsuarioEnLista;
-import com.test.questions.VerificarVentanaPrincipal;
+import com.test.questions.*;
 import com.test.tasks.*;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
@@ -105,4 +102,29 @@ public class AccionesStepDefinition {
     public void seleccionaUnTipoDeAlerta(List<String> opcion) {
         theActorInTheSpotlight().attemptsTo(SeleccionarOpcion.emergente(opcion.get(1)));
     }
+
+    ///******************
+
+    @Dado("^que (.*) ingresa al modulo modal dialos$")
+    public void queFerIngresaAlModuloModalDialos(String actor) {
+        theActorCalled(actor).wasAbleTo(SeleccionarModalDialogs.enElPortal());
+    }
+
+    @Cuando("^cuando lee el texto dentro del los iframe$")
+    public void cuandoLeeElTextoDentroDelLosIframe() {
+    }
+
+    ///******************
+
+    @Dado("^que (.*) ingresa al modulo iframes$")
+    public void queFerIngresaAlModuloIframes(String actor) {
+        theActorCalled(actor).wasAbleTo(IngresarAIframe.enPortal());
+    }
+
+    @Cuando("^cuando lee el texto dentro del iframe$")
+    public void cuandoLeeElTextoDentroDelIframe() {
+        theActorInTheSpotlight().should(seeThat(VerificarTextoIframe.seleccionadas()));
+    }
+
+
 }

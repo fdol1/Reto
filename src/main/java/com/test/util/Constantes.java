@@ -7,13 +7,14 @@ public class Constantes {
     public static final String OPCION_WEB_TABLES = "Web Tables";
     public static final String OPCION_DATA_PICKER = "Date Picker";
     public static final String OPCION_ALERT_FRAME_WINDOWS = "Alerts, Frame & Windows";
+    public static final String OPCION_MODAL_DIAGLOS = "Modal Dialogs";
+    public static final String OPCION__MODAL_DIAGLOS = "Modal Dialogs";
     public static final String OPCION_ELIMINADO = "Eliminado";
     public static final String OPCION_NO_ELIMINADO = "no eliminado";
     public static final String OPCION_BROWSER = "Browser Windows";
     public static final String OPCION_ALERTS = "Alerts";
-    public static final String OPCION_FRAME = "";
-    public static final String OPCION_NESTED_FRAME = "";
-
+    public static final String OPCION_FRAME = "Frames";
+    public static final String OPCION_MODAL_DIALOGS = "Modal Dialogs";
     public static final String OPCION_CLICK = "Click";
     public static final String OPCION_CLICK_ESPERA = "Click y espera";
 
@@ -29,6 +30,7 @@ public class Constantes {
     public static final String LLAVE_USUARIO_NO_ELIMINADO = "usuario_no_eliminado";
     public static final String LLAVE_FECHA = "fecha";
     public static final String LLAVE_FEHCA_Y_HORA = "fecha_y_hora";
+    public static final String LLAVE_ELEMENTO_IFRAME = "iframe";
 
 }
 

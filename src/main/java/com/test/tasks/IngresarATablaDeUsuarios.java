@@ -7,8 +7,7 @@ import net.serenitybdd.screenplay.Tasks;
 
 import static com.test.userinterface.HomePage.LIST_ELEMENT_HOME_PAGE;
 import static com.test.userinterface.UiElements.*;
-import static com.test.util.Constantes.OPCION_ELEMENT;
-import static com.test.util.Constantes.OPCION_WEB_TABLES;
+import static com.test.util.Constantes.*;
 
 public class IngresarATablaDeUsuarios implements Task {
     public IngresarATablaDeUsuarios() {
@@ -20,7 +19,7 @@ public class IngresarATablaDeUsuarios implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                SeleccionarLista.desde(LIST_ELEMENT_HOME_PAGE,OPCION_ELEMENT),
+                SeleccionarLista.desde(LIST_ELEMENT_HOME_PAGE,OPCION_FRAME),
                 SeleccionarLista.desde(LIST_ITEMS_ELEMENTS,OPCION_WEB_TABLES)
         );
     }
